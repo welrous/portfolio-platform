@@ -1,6 +1,4 @@
-Here's a sample **README.md** file for your project that includes an overview, setup instructions, usage details, and relevant notes:
-
----
+![Uploading image.png…]()
 
 # My Portfolio
 
