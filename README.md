@@ -1,4 +1,5 @@
-![Uploading image.png…]()
+![photo_2024-11-17_05-21-00](https://github.com/user-attachments/assets/31bd6b45-9bb9-48cf-83e2-8aac0bd97255)
+
 
 # My Portfolio
 
