@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/scripts.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="navbar-left">Amina Rysbekova</div>
+      <div class="navbar-center">
+        <a href="#finance">Finance</a>
+        <a href="#news">News</a>
+      </div>
+      <div class="navbar-right">
+        <a href="/login" class="login-btn">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://images.pexels.com/photos/1181278/pexels-photo-1181278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Hero Background">
+        <div class="hero-overlay">
+          <h1>My Portfolio</h1>
+        </div>
+      </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" style="text-align: center;">
+        <h2>My Portfolio</h2>
+        <div id="portfolio-carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Portfolio Item 1 -->
+            <div class="carousel-item active">
+              <div class="carousel-item-content">
+                <img src="https://via.placeholder.com/400x250?text=Item+1" class="d-block w-100" alt="Item 1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Item Title 1</h5>
+                  <p>This is a brief description of the first item in my portfolio. It showcases some cool work I did!</p>
+                  <p><small>Created: 2024-01-01 | Updated: 2024-02-01 | Deleted: N/A</small></p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Portfolio Item 2 -->
+            <div class="carousel-item">
+              <div class="carousel-item-content">
+                <img src="https://via.placeholder.com/400x250?text=Item+2" class="d-block w-100" alt="Item 2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Item Title 2</h5>
+                  <p>This is the second portfolio item. I worked on it as part of a collaborative project.</p>
+                  <p><small>Created: 2024-02-10 | Updated: 2024-03-01 | Deleted: N/A</small></p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Portfolio Item 3 -->
+            <div class="carousel-item">
+              <div class="carousel-item-content">
+                <img src="https://via.placeholder.com/400x250?text=Item+3" class="d-block w-100" alt="Item 3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Item Title 3</h5>
+                  <p>This is the third portfolio item, which represents my expertise in design and development.</p>
+                  <p><small>Created: 2024-03-15 | Updated: 2024-04-01 | Deleted: 2024-04-15</small></p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Add more items here as needed -->
+          </div>
+      
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="prev" style="top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#portfolio-carousel" data-bs-slide="next" style="top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      
+      
+
+    <!-- Finance Section -->
+    <%- include('financial') %>
+
+    <!-- News Section -->
+    <section id="news">
+      <h2>Latest News</h2>
+      <div id="news-container">
+        <!-- News will be dynamically loaded here -->
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="/contact" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Amina Rysbekova | BDA-2302</p>
+  </footer>
+</body>
+</html>
